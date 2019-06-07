@@ -1,9 +1,9 @@
-# GoogleAppsScripts_BacklogIssue_inform_Slack-GAS-
+# GoogleAppsScripts_Backlog_Webhook_informIssue_Slack
 BacklogのWebhook機能を利用して、課題追加・更新・コメント追加情報をSlackに担当者にのみダイレクトメッセージで通知する機能です。
 
 ## 使い方
 
-1. https://www.google.com/intl/ja_ALL/drive/ にアクセスします。
+1. Googleドライブ(https://www.google.com/intl/ja_ALL/drive/ )にアクセスします。
 1. 新規ボタン＞その他＞アプリを追加で「Google Apps Script」を検索し、接続します。
 1. 新規ボタン＞その他＞「Google Apps Script」を選択します。
 1. プロジェクト名を任意の名称を付けます(例「backlogInformSlack」など)
