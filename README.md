@@ -1,0 +1,2 @@
+# GoogleAppsScripts_BacklogIssue_inform_Slack-GAS-
+BacklogのWebhook機能を利用して、課題追加・更新・コメント追加情報をSlackに担当者にのみダイレクトメッセージで通知する機能です。
