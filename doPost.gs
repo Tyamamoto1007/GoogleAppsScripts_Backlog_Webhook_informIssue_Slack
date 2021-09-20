@@ -19,10 +19,11 @@ function doPost(e) {
   var jsonString = e.postData.getDataAsString();
   var data = JSON.parse(jsonString);
 
-  //コンテナバインドスクリプトでかつシートが1つしかないため、アクティブなシートを読み込む。
-  var settingSheet = SpreadsheetApp.getActiveSheet();
+  //スプレッドシートに付随しないスタンドアロンなスクリプトのため、事前条件2で取得したスプレッドシートのIDを読み取るようにする。
+  var sp = SpreadsheetApp.openById(PropertiesService.getScriptProperties().getProperty('SHEET_ID'));
+  var settingSheet = sp.getSheetByName("BacklogToSlack");
 
-  //Slack通知できるようにするためにTOKENの設定。Slack APIのトークンを事前条件3で設定した値から取得する
+  //Slack通知できるようにするためにTOKENの設定。Slack APIのトークンを事前条件1で設定した値から取得する
   var token = PropertiesService.getScriptProperties().getProperty('SLACK_ACCESS_TOKEN');
   //slackにメッセージを送るSlackAppオブジェクトを生成し、tokenをセットする
   var slackApp = SlackApp.create(token);
@@ -41,7 +42,7 @@ function doPost(e) {
   //担当者＝登録者の場合は、通知が飛ばないよう処理を終了する
   if (assignee == register) return 0;
 
-  //リンク先URLに必要な要素、BacklogのURLとプロジェクトキーと課題idを取得する
+  //リンク先URLに必要な要素、BacklogのURL(事前条件3で取得)とプロジェクトキーと課題idを取得する
   var projectURL = PropertiesService.getScriptProperties().getProperty('BACKLOG_URL') + "view/";
   var projectKey = data["project"]["projectKey"];
   var issueKey = data["content"]["key_id"];
