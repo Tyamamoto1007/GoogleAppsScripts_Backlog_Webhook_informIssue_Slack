@@ -13,7 +13,7 @@ BacklogのWebhook機能を利用して、課題追加・更新・コメント追
 
 事前条件1 SlackのAPIを利用できるように、アプリを追加しておく(Bot User OAuth Access Tokenを控えておく)
 
-事前条件2 Googleスプレッドシートを新規作成、シート名を「BacklogToSlack」に名前変更する。Backlogユーザー名(A列)とSlackメンバーID(B列)の対応表入力。スプレッドシートURL欄の「~d/○○/edit#~」の○○を控えておく
+事前条件2 Googleスプレッドシートを新規作成、シート名を「BacklogToSlack」に名前変更する。Backlogユーザー名(A列)とSlackメンバーID(B列)の対応表入力。スプレッドシートURL欄の「～d/○○/edit#～」の○○を控えておく
 
 事前条件3 BacklogのURL(例．https:// [スペースID] .backlog.jp/、or https:// [スペースID] .backlog.com/)を控えておく ※URL末尾にスラッシュ必須
 
