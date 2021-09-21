@@ -20,6 +20,7 @@ BacklogのWebhook機能を利用して、課題追加・更新・コメント追
 事前条件4 メニュー「ライブラリ」の＋マークをクリックして「1on93YOYfSmV92R5q59NpKmsyWIQD8qnoLYk-gkQBI92C58SPyA2x1-bq」入力する。SlackAppを追加されるので、バージョンは最新のものを選択して保存する
 
 事前条件5 事前条件1~3をinitProperty関数内のsetProperyメソッドの第2引数(値)に設定し、initPropertyを実行。※実行時に実行許可が必要
+※初回実行後は、initPropertyは不要になるため、APIキー等秘匿するために削除します。
 
 7. 設定完了後、事後設定を実施します。
 
